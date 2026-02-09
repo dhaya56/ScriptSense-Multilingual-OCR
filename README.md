@@ -13,13 +13,13 @@ This project demonstrates a robust integration of computer vision, Natural Langu
 ---
 
 ## Table of Contents
-- [Key Capabilities](#-key-capabilities)
-- [System Architecture](#-system-architecture)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Setup & Installation](#-setup--installation)
-- [Usage](#-usage)
-- [Notes on Excluded Files](#-notes-on-excluded-files)
+- [Key Capabilities](#key-capabilities)
+- [System Architecture](#system-architecture)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Setup & Installation](#setup--installation)
+- [Usage](#usage)
+- [Notes on Excluded Files](#notes-on-excluded-files)
 
 ---
 
@@ -93,9 +93,9 @@ ai_ocr_project/
 │   └── requirements.txt
 ├── frontend/
 │   ├── src/
-│   │   ├── pages/              # Pages on the web
-│   │   ├── components/         # React components
-│   │   ├── utils/              # .js files necessary for authentication
+│   │   ├── pages/              # Home, Landing, Login, Signup
+│   │   ├── components/         # Reuable React UI components
+│   │   ├── utils/              # API & auth helpers
 │   │   ├── assets/             # Fonts, logo, background video
 │   │   ├── App.jsx
 │   │   ├── main.jsx
@@ -109,5 +109,131 @@ ai_ocr_project/
 │   └── vite.config.js          # Vite Configuration
 ├── .gitignore
 └── README.md
+```
+
+---
+
+## Setup & Installation
+
+### Backend Setup
+
+### 1️⃣ Clone the Repository
+```bash
+git clone [https://github.com/](https://github.com/)<your-username>/scriptsense-ocr.git
+cd ai_ocr_project
+```
+
+### 2️⃣ Create and Activate Virtual Environment
+
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
+
+```bash
+# Mac/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install Backend Dependencies
+```bash
+pip install -r backend/requirements.txt
+```
+
+### 3️⃣ IndicTrans2 Toolkit Setup (Required)
+**Note**: IndicTrans2 is required for multilingual translation but is not included in the git repository. You must install it manually.
+
+The toolkit must exist in two locations for the system to function correctly:
+
+```text
+ai_ocr_project/
+├── IndicTransToolkit/          <-- Location 1 (Root)
+├── backend/
+│   └── src/
+│       └── IndicTransToolkit/  <-- Location 2 (Backend Source)
+```
+
+**Steps to Install**:
+
+1. Clone the toolkit from the official repository:
+
+https://github.com/AI4Bharat/IndicTrans2
+
+2. Place the cloned folder at the project root: 
+```bash
+ai_ocr_project/IndicTransToolkit
+```
+
+3. Copy that same folder into: 
+```bash
+ai_ocr_project/backend/src/IndicTransToolkit
+```
+
+### 4️⃣ Language Resource Files (Required)
+The backend requires pre-generated language resource files (.pkl) for OCR and translation processing. These are excluded from version control.
+
+Action: Ensure the following files exist inside the backend/ directory:
+
+```text
+backend/
+├── en.pkl
+└── hi.pkl
+```
+
+### 5️⃣ Required Runtime Directories
+The following directories are generated at runtime to store uploads and results. If they are not created automatically, please create them manually:
+
+```text
+backend/
+├── database/
+├── static/
+│   ├── uploads/
+│   ├── audio/
+│   └── results/
+└── app/
+    └── static/
+        └── results/
+```
+
+### 6️⃣ Run the Backend
+```bash
+python backend/run.py
+```
+The backend API will start, exposing endpoints for OCR, translation, and document generation.
+
+## Frontend Setup
+
+### 1️⃣ Install Dependencies
+```bash
+cd frontend
+npm install
+```
+
+### 2️⃣ Start the Frontend
+```bash
+npm run dev
+```
+
+---
+
+## Notes on Excluded Files
+
+The following are intentionally excluded from Git:
+
+- SQLite database files
+
+- Uploaded images and generated outputs
+
+- External toolkits (IndicTrans2)
+
+- Serialized language artifacts (.pkl)
+
+- Node modules
+
+---
+
+
 
 
