@@ -159,7 +159,7 @@ ai_ocr_project/
 
 1. Clone the toolkit from the official repository:
 
-https://github.com/AI4Bharat/IndicTrans2
+    https://github.com/AI4Bharat/IndicTrans2
 
 2. Place the cloned folder at the project root: 
 ```bash
@@ -174,7 +174,7 @@ ai_ocr_project/backend/src/IndicTransToolkit
 ### 4️⃣ Language Resource Files (Required)
 The backend requires pre-generated language resource files (.pkl) for OCR and translation processing. These are excluded from version control.
 
-Action: Ensure the following files exist inside the backend/ directory:
+**Action**: Ensure the following files exist inside the backend/ directory:
 
 ```text
 backend/
@@ -215,6 +215,70 @@ npm install
 ```bash
 npm run dev
 ```
+
+---
+
+## Usage
+
+Once both the backend and frontend are running, ScriptSense can be used through the web interface.
+
+### Application Flow
+
+1. Open the Web Application
+
+- Access the frontend in your browser (default Vite URL):
+    ```text
+    http://localhost:5173
+    ```
+
+2. User Authentication
+
+- Sign up for a new account or log in using existing credentials.
+
+- Authentication is handled via the Flask backend.
+
+3. Upload Image for OCR
+
+- Upload an image containing printed or handwritten text.
+
+- Supported use cases include:
+
+    - Scanned documents
+
+    - Photographs of text
+
+    - Multilingual content
+
+4. OCR & Processing Pipeline
+
+- The backend performs:
+
+    - Image preprocessing
+
+    - OCR inference
+
+    - Language-specific processing
+
+    - translation
+
+5. View & Export Results
+
+- OCR results are displayed in the UI.
+
+- Users can:
+
+    - Download results as PDF or DOCX
+
+    - Generate audio output using text-to-speech
+
+6. Generated Outputs
+
+- Files are stored temporarily in runtime directories:
+    ```text
+    backend/static/results/
+    backend/static/audio/
+    ```
+- These outputs are excluded from version control by design.
 
 ---
 
