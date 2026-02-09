@@ -224,20 +224,20 @@ Once both the backend and frontend are running, ScriptSense can be used through 
 
 ### Application Flow
 
-1. Open the Web Application
+**Open the Web Application**
 
 - Access the frontend in your browser (default Vite URL):
     ```text
     http://localhost:5173
     ```
 
-2. User Authentication
+**User Authentication**
 
 - Sign up for a new account or log in using existing credentials.
 
 - Authentication is handled via the Flask backend.
 
-3. Upload Image for OCR
+**Upload Image for OCR**
 
 - Upload an image containing printed or handwritten text.
 
@@ -249,7 +249,7 @@ Once both the backend and frontend are running, ScriptSense can be used through 
 
     - Multilingual content
 
-4. OCR & Processing Pipeline
+**OCR & Processing Pipeline**
 
 - The backend performs:
 
@@ -261,7 +261,7 @@ Once both the backend and frontend are running, ScriptSense can be used through 
 
     - translation
 
-5. View & Export Results
+**View & Export Results**
 
 - OCR results are displayed in the UI.
 
@@ -271,7 +271,7 @@ Once both the backend and frontend are running, ScriptSense can be used through 
 
     - Generate audio output using text-to-speech
 
-6. Generated Outputs
+**Generated Outputs**
 
 - Files are stored temporarily in runtime directories:
     ```text
@@ -279,6 +279,21 @@ Once both the backend and frontend are running, ScriptSense can be used through 
     backend/static/audio/
     ```
 - These outputs are excluded from version control by design.
+
+---
+
+## Sample Screenshots
+
+Below are representative screenshots from the ScriptSense web application:
+
+### Landing Page
+![Landing Page](assets/landing_page.png)
+
+### OCR Upload Interface
+![Upload Interface](assets/upload_page.png)
+
+### OCR Results & Export Options
+![Results Page](assets/results_page.png)
 
 ---
 
