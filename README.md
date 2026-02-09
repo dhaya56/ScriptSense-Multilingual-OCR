@@ -19,6 +19,7 @@ This project demonstrates a robust integration of computer vision, Natural Langu
 - [Project Structure](#project-structure)
 - [Setup & Installation](#setup--installation)
 - [Usage](#usage)
+- [Sample Screenshots](#sample-screenshots)
 - [Notes on Excluded Files](#notes-on-excluded-files)
 
 ---
