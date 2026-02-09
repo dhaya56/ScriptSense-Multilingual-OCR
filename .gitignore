@@ -1,0 +1,56 @@
+############################
+# General
+############################
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.DS_Store
+Thumbs.db
+
+############################
+# Backend - Runtime Data
+############################
+backend/instance/
+
+# Direct backend static outputs
+backend/static/audio/
+backend/static/uploads/
+backend/static/results/
+
+# Flask app static outputs
+backend/app/static/results/
+
+# Databases
+backend/database/
+*.db
+*.sqlite
+*.sqlite3
+
+# Pickle / serialized artifacts
+*.pkl
+
+############################
+# External Toolkits & Models
+############################
+IndicTransToolkit/
+backend/src/IndicTransToolkit/
+
+############################
+# Frontend
+############################
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+############################
+# Environment & IDE
+############################
+.env
+.env.*
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
